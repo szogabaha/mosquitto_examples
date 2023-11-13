@@ -1,0 +1,15 @@
+# This sample script creates a  server and 2 clients around at the same time,
+# then it outputs the client's output to stdout.
+# The server is not destroyed, so if it's run again, the clients might 
+# receive multiple responses for the same request.
+
+timeout 5 ./server > /dev/null &
+
+./client > c1 &
+./client > c2 &
+
+wait
+
+cat c1
+cat c2
+rm c1 c2
