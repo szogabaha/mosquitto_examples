@@ -1,6 +1,6 @@
 CC = gcc
 #INSERT PATH TO MOSQUITTO HERE!
-CFLAGS = -I"/home/szogabaha/src/ntnu/dcommunication/mosquitto-2.0.17/include"
+CFLAGS = -I"{PATH_TO_MOSQUITTO}/include"
 LDFLAGS = -L. -lmosquitto
 
 # Target: all
